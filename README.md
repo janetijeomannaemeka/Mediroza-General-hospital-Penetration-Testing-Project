@@ -4,6 +4,13 @@ Client: Mediroza General Hospital | Type: Black-box Penetration Test | Target: m
 Networkwalks B084 | Week 4
 
 
+
+ ![hash calculator](https://github.com/janetijeomannaemeka/NETWORKWALKS-B084-WK3-password-hashing/blob/main/Firefox%2020_11_2026%2008_04_53.png?raw=true)
+
+
+ ![hash calculator](https://github.com/janetijeomannaemeka/NETWORKWALKS-B084-WK3-password-hashing/blob/main/Firefox%2020_11_2026%2008_04_53.png?raw=true)
+
+
 ![Mediroza General Hospital — Penetration Testing Report](assets/mediroza-cover-v2.png)
 
 Mediroza General Hospital — Penetration Testing Report
