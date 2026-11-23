@@ -1,17 +1,13 @@
+![Mediroza General Hospital — Penetration Testing Report](https://github.com/janetijeomannaemeka/Mediroza-General-hospital-Penetration-Testing-Project/blob/main/mediroza-cover-v2.png?raw=true)
+
+
+
 # Mediroza-General-Hospital-Penetration-Testing-Project
 Mediroza General Hospital — Penetration Testing Report
 Client: Mediroza General Hospital | Type: Black-box Penetration Test | Target: medirozahospital.com | Duration: 5 days | Authorization: Written permission granted for educational security assessment
 Networkwalks B084 | Week 4
 
 
-
- ![hash calculator](https://github.com/janetijeomannaemeka/NETWORKWALKS-B084-WK3-password-hashing/blob/main/Firefox%2020_11_2026%2008_04_53.png?raw=true)
-
-
- ![hash calculator](https://github.com/janetijeomannaemeka/NETWORKWALKS-B084-WK3-password-hashing/blob/main/Firefox%2020_11_2026%2008_04_53.png?raw=true)
-
-
-![Mediroza General Hospital — Penetration Testing Report](https://github.com/janetijeomannaemeka/Mediroza-General-hospital-Penetration-Testing-Project/blob/main/mediroza-cover-v2.png?raw=true)
 
 Mediroza General Hospital — Penetration Testing Report
 
