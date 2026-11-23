@@ -2,6 +2,17 @@
 Mediroza General Hospital — Penetration Testing Report
 Client: Mediroza General Hospital | Type: Black-box Penetration Test | Target: medirozahospital.com | Duration: 5 days | Authorization: Written permission granted for educational security assessment
 Networkwalks B084 | Week 4
+
+
+![Mediroza General Hospital — Penetration Testing Report](assets/mediroza-cybersec-cover.png)
+
+
+
+
+
+
+
+
 1. Executive Summary
 A black-box assessment of medirozahospital.com identified a Critical chain of vulnerabilities that together expose patient lab results, full employee payroll records, and hospital shareholder/ownership data to any unauthenticated internet user. No specialized exploitation framework was required — the exposure was reachable through a publicly listed backup directory, and the patient portal's document protection relied on weak, easily guessed passwords.
 Key findings:
