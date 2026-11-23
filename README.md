@@ -4,8 +4,7 @@ Client: Mediroza General Hospital | Type: Black-box Penetration Test | Target: m
 Networkwalks B084 | Week 4
 
 
-![Mediroza General Hospital — Penetration Testing Report](assets/mediroza-cybersec-cover.png)
-
+![Mediroza General Hospital — Penetration Testing Report](assets/mediroza-cover-v2.png)
 
 
 
