@@ -3,15 +3,24 @@
 
 
 # Mediroza-General-Hospital-Penetration-Testing-Project
+
 Mediroza General Hospital 
+
 Penetration Testing Report
-NetworkWalks Cybersecurity Internship | Week 4 (Batch B084)
-Assessment type | Black-box web application penetration test
-Client | Mediroza General Hospital
-Target | medirozahospital.com
-Duration | 5 days
-Authorization | Written permission granted
-Overall reported risk | CRITICAL
+
+NetworkWalks Cybersecurity Internship Week 4 (Batch B084)
+
+Assessment type : Black-box web application penetration test
+
+Client : Mediroza General Hospital
+
+Target : medirozahospital.com
+
+Duration : 5 days
+
+Authorization : Written permission granted
+
+Overall reported risk : CRITICAL
 
 
 
@@ -26,11 +35,11 @@ A black-box assessment of medirozahospital.com identified a Critical chain of vu
 
 | # | Finding | Reported severity | Evidence status |
 |---|---|---|---|
-| 1 |  	robots.txt entry advertised a legacy directory, leading to an unauthenticated, world-readable database backup (medirozahospital_db_backup_2019.sql) containing full employee and shareholder tables | Critical |      |
-| 2 |  All 3 patient pathology reports retrieved from the Patient Portal were protected with weak passwords (123456, password, a short symbol string), cracked in seconds to minutes | Critical ||
+| 1 |  	robots.txt entry advertised a legacy directory, leading to an unauthenticated, world-readable database backup (medirozahospital_db_backup_2019.sql) containing full employee and shareholder tables | Critical |   Reported as retrieved without authentication   |
+| 2 |  All 3 patient pathology reports retrieved from the Patient Portal were protected with weak passwords (123456, password, a short symbol string), cracked in seconds to minutes | Critical |Sensitive tables reportedly present in the SQL dump|
 | 3 | Weak password protection on patient pathology PDFs | High | Three reports reportedly recovered |	Patient Portal login form showed signs consistent with SQL injection exposure  indicating the authentication
 | 4 | Possible SQL injection in Patient Portal login | High  | Requires full HTTP request/response evidence and retest |
-| 5 | WAF, rate-limiting, or intrusion detection — reconnaissance and credential attacks completed without any blocking or alerting | High |     |
+| 5 | WAF, rate-limiting, or intrusion detection — reconnaissance and credential attacks completed without any blocking or alerting | High | External observation only; control absence not proven    |
 
 Overall risk to the client: Critical. The combination of an exposed database backup and weak document/account credentials means a motivated attacker with no special tooling could access protected health information (PHI), personally identifiable information (PII) of all staff, and confidential ownership/financial data within minutes of starting reconnaissance.
 
