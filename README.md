@@ -101,8 +101,9 @@ Shareholder	Share %	Shares Held	Class
 
 
 Employee salary table (sample of recovered rows):
-|---|---|---|---|---|
+
 | Name	| Role	| Department |	Annual Salary |	Hired | 
+|---|---|---|---|---|
 | Dr. Suresh Moodley	| Consultant Radiologist	| Radiology |	130,000	| 2012-02-28 |
 | Dr. Vikram Chetty	| Anaesthetist |	Theatre	| 135,000	| 2011-06-13 |
 | Dr. Fatima Patel |	Pediatrician |	Pediatrics |	118,000 |	2013-10-17 |
