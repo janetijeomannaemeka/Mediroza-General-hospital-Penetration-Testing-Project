@@ -192,5 +192,5 @@ This engagement demonstrates that a single overlooked configuration detail — a
 
 
 
-
+![](https://github.com/janetijeomannaemeka/Mediroza-General-hospital-Penetration-Testing-Project/blob/main/kali-linux-2025.4-virtualbox-amd64%20(Snapshot%202)%20%5BRunning%5D%20-%20Oracle%20VirtualBox%2023_11_2026%2011_45_42.png?raw=true)
 
