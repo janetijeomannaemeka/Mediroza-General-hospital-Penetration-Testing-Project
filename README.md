@@ -3,14 +3,15 @@
 
 
 # Mediroza-General-Hospital-Penetration-Testing-Project
-Mediroza General Hospital — Week 4 Penetration Testing Report
-NetworkWalks Cybersecurity Internship — Week 4 (Batch B084)
-Assessment type: Black-box web application penetration test
-Client: Mediroza General Hospital
-Target: medirozahospital.com
-Duration: 5 days
-Authorization: Written permission granted
-Overall reported risk: CRITICAL
+Mediroza General Hospital 
+Penetration Testing Report
+NetworkWalks Cybersecurity Internship | Week 4 (Batch B084)
+Assessment type | Black-box web application penetration test
+Client | Mediroza General Hospital
+Target | medirozahospital.com
+Duration | 5 days
+Authorization | Written permission granted
+Overall reported risk | CRITICAL
 
 
 
