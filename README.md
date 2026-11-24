@@ -32,8 +32,8 @@ Overall reported risk : CRITICAL
 1. Executive Summary
 A black-box assessment of medirozahospital.com identified a Critical chain of vulnerabilities that together expose patient lab results, full employee payroll records, and hospital shareholder/ownership data to any unauthenticated internet user. No specialized exploitation framework was required — the exposure was reachable through a publicly listed backup directory, and the patient poral's document protection relied on weak, easily guessed passwords.
 
-
-2. | # | Finding | Reported severity | Evidence status |
+2. 
+| # | Finding | Reported severity | Evidence status |
 |---|---|---|---|
 | 1 |  	robots.txt entry advertised a legacy directory, leading to an unauthenticated, world-readable database backup (medirozahospital_db_backup_2019.sql) containing full employee and shareholder tables | Critical |   Reported as retrieved without authentication   |
 | 2 |  All 3 patient pathology reports retrieved from the Patient Portal were protected with weak passwords (123456, password, a short symbol string), cracked in seconds to minutes | Critical |Sensitive tables reportedly present in the SQL dump|
@@ -43,8 +43,8 @@ A black-box assessment of medirozahospital.com identified a Critical chain of vu
 
 Overall risk to the client: Critical. The combination of an exposed database backup and weak document/account credentials means a motivated attacker with no special tooling could access protected health information (PHI), personally identifiable information (PII) of all staff, and confidential ownership/financial data within minutes of starting reconnaissance.
 
-
-3.  | Item | Details |
+3.
+ | Item | Details |
 |---|---|
 | Target | `https://medirozahospital.com` |
 | Application areas | Production web application, Patient Portal, and Staff Portal (as described in the engagement notes) |
