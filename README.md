@@ -79,35 +79,43 @@ robots.txt disallowed crawling of /patient/, /staff/, and /old/ — but since ro
 Index of /old/
 mediroza_db_backup_2019.sql   2026-09-04 02:02   7k
 The file was retrieved with a single unauthenticated HTTP GET (wget https://medirozahospital.com/old/mediroza_db_backup_2019.sql) — no login, token, or rate-limiting encountered. The 2026 server-side modification date on a file named _2019 suggests the backup is actively being touched or regenerated, not a true forgotten artifact — worth flagging to the client as a possible automated backup job still writing to a public path.
+
+
 Finding 2  | Critical Data Exposure | Full Employee and Shareholder Records (Critical)
 The exposed SQL backup contained complete, structured tables for hospital staff and ownership, with schema and data intact (not sanitized/sample data):
 Shareholders table (10 rows, 100% of equity accounted for):
 Shareholder	Share %	Shares Held	Class
-Dr. Rajesh Naidoo |	18.0% |	180,000	| Ordinary
-Cedar Health Holdings (Pty) Ltd |	15.0%	| 150,000	| Ordinary
-Dr. Johan van der Merwe	 | 12.0% |	120,000	| Ordinary
-Reddy Family Trust	| 11.0% |	110,000	| Ordinary
-Thabo Molefe	| 10.0%	| 100,000 |	Ordinary
-Sarah Botha |	9.0%	| 90,000	| Ordinary
-Dr. Ahmed Kara	|8.0% |	80,000 |	Preferential
-Naledi Zulu	| 7.0% |	70,000 |	Ordinary
-Michael Roberts	| 6.0%	| 60,000	| Ordinary
-Dr. Vikram Chetty	|4.0%	| 40,000	| Preferential
+
+| shareholder | share % | shares held | class  |
+|---|---|---|---|
+| Dr. Rajesh Naidoo |	18.0% |	180,000	| Ordinary |
+| Cedar Health Holdings (Pty) Ltd |	15.0%	| 150,000	| Ordinary |
+| Dr. Johan van der Merwe	 | 12.0% |	120,000	| Ordinary |
+| Reddy Family Trust	| 11.0% |	110,000	| Ordinary |
+| Thabo Molefe	| 10.0%	| 100,000 |	Ordinary |
+| Sarah Botha |	9.0%	| 90,000	| Ordinary |
+| Dr. Ahmed Kara	|8.0% |	80,000 |	Preferential |
+| Naledi Zulu	| 7.0% |	70,000 |	Ordinary |
+| Michael Roberts	| 6.0%	| 60,000	| Ordinary |
+| Dr. Vikram Chetty	|4.0%	| 40,000	| Preferential |
+
+
 Employee salary table (sample of recovered rows):
-Name	| Role	| Department |	Annual Salary |	Hired
-Dr. Suresh Moodley	| Consultant | Radiologist	| Radiology |	130,000	| 2012-02-28
-Dr. Vikram Chetty	| Anaesthetist |	Theatre	| 135,000	| 2011-06-13
-Dr. Fatima Patel |	Pediatrician |	Pediatrics |	118,000 |	2013-10-17
-David Smith	| Facilities Manager	Operations|	52,000	| 2014-10-27
-Nisha Singh |	Physiotherapist	|Rehabilitation |	48,000	| 2016-11-09
-Patesa Radebe |	Radiographer|	Radiology	|43,000	| 2017-04-11
-Deepak Pillay |	Lab Technologist |	Diagnostics Lab	| 41,000 |	2015-05-20
-Peter van Wyk	|Procurement Officer |	Supply Chain |	38,000	| 2015-08-24
-Kavitha Govender |	Lab Technician	| Diagnostics Lab |	35,000	| 2018-08-06
-Karen O'Connor |	Billing Administrator	| Finance |	29,000	| 2018-03-19
-James Wilson	| Security Supervisor	| Operations	| 27,000	| 2019-09-02
-Andile Mbeki |	Ward Clerk |	Administration	| 21,000	| 2019-11-05
-Linda Fourie	| Receptionist	| Front Office	| 19,000 |	2020-02-10
+|---|---|---|---|---|
+| Name	| Role	| Department |	Annual Salary |	Hired | 
+| Dr. Suresh Moodley	| Consultant Radiologist	| Radiology |	130,000	| 2012-02-28 |
+| Dr. Vikram Chetty	| Anaesthetist |	Theatre	| 135,000	| 2011-06-13 |
+| Dr. Fatima Patel |	Pediatrician |	Pediatrics |	118,000 |	2013-10-17 |
+| David Smith	| Facilities Manager |	Operations|	52,000	| 2014-10-27 |
+| Nisha Singh |	Physiotherapist	|Rehabilitation |	48,000	| 2016-11-09 |
+|  Radebe |	Radiographer|	Radiology	|43,000	| 2017-04-11 |
+| Deepak Pillay |	Lab Technologist |	Diagnostics Lab	| 41,000 |	2015-05-20 |
+| Peter van Wyk	|Procurement Officer |	Supply Chain |	38,000	| 2015-08-24 |
+| Kavitha Govender |	Lab Technician	| Diagnostics Lab |	35,000	| 2018-08-06 |
+| Karen O'Connor |	Billing Administrator	| Finance |	29,000	| 2018-03-19 |
+| James Wilson	| Security Supervisor	| Operations	| 27,000	| 2019-09-02 |
+| Andile Mbeki |	Ward Clerk |	Administration	| 21,000	| 2019-11-05 |
+| Linda Fourie	| Receptionist	| Front Office	| 19,000 |	2020-02-10 |
 
 
 
