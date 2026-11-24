@@ -72,6 +72,9 @@ The engagement followed a standard black-box workflow.
 | Data analysis | Review of SQL schema, table contents, and file metadata | Manual review |
 
 
+[](https://github.com/janetijeomannaemeka/Mediroza-General-hospital-Penetration-Testing-Project/blob/main/Firefox%2023_11_2026%2012_53_43.png?raw=true)
+
+
 
 5. Findings and Proof of Exploitation
 Finding 1 — Sensitive Information Disclosure via robots.txt and Public Directory Listing (Critical)
