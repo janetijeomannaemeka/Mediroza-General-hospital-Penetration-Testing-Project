@@ -77,6 +77,8 @@ The engagement followed a standard black-box workflow.
 ![](https://github.com/janetijeomannaemeka/Mediroza-General-hospital-Penetration-Testing-Project/blob/main/kali-linux-2025.4-virtualbox-amd64%20(Snapshot%202)%20%5BRunning%5D%20-%20Oracle%20VirtualBox%2023_11_2026%2012_45_58.png?raw=true)
 
 
+![](https://github.com/janetijeomannaemeka/Mediroza-General-hospital-Penetration-Testing-Project/blob/main/kali-linux-2025.4-virtualbox-amd64%20(Snapshot%202)%20%5BRunning%5D%20-%20Oracle%20VirtualBox%2023_11_2026%2012_01_15.png?raw=true)
+
 5. Findings and Proof of Exploitation
 Finding 1 — Sensitive Information Disclosure via robots.txt and Public Directory Listing (Critical)
 robots.txt disallowed crawling of /patient/, /staff/, and /old/ — but since robots.txt is advisory-only and publicly readable, it directly revealed the existence of a legacy /old/ path to a human tester. That directory had listing enabled and contained an unauthenticated, downloadable database backup:
