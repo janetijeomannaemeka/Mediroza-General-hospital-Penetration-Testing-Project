@@ -140,7 +140,8 @@ Testing of the Patient Portal login form with the input admin'-- in the username
 Finding 5 | Absence of Perimeter and Host-Based Defenses | High |
 No web application firewall, rate-limiting, or intrusion-prevention behavior was observed at any stage of testing: directory enumeration, repeated failed dictionary-attack attempts against PDF passwords, and credential-bypass probes against the login form all completed without delay, CAPTCHA challenges, IP blocking, or any visible defensive response. This indicates the absence of, or a significant misconfiguration in, firewall and intrusion-detection controls protecting the web tier, consistent with no antivirus/endpoint protection being evident on the hosting environment during testing.
 7. Risk Rating
-#	|Finding |	Risk Rating |	Justification
+
+|Finding |	Risk Rating |	Justification |
 |---|---|---|
 1	|Public backup exposure via robots.txt + directory listing |	Critical |	Unauthenticated, trivial access to a full database dump; no auth or special tooling required |
 2	|Employee salary and shareholder data exposed	| Critical |	Confidential financial/PII data fully exposed; includes governance-sensitive conflict-of-interest detail|
@@ -151,6 +152,7 @@ Ratings follow a standard qualitative scale | Critical / High / Medium / Low | b
 5 |Defensive controls not observed | High |Lack of visible defensive response may increase exposure; actual control status requires validation| 
 
 8. Recommendations and Remediation
+   
 | Priority | Area | Recommended action |
 |---|---|---|
 | P0 — Immediate | Backup exposure | Remove the exposed backup from the production web root, disable directory listing, and move backups to secure non-public storage. |
