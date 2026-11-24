@@ -210,5 +210,14 @@ This engagement demonstrates that a single overlooked configuration detail — a
 ![](https://github.com/janetijeomannaemeka/Mediroza-General-hospital-Penetration-Testing-Project/blob/main/kali-linux-2025.4-virtualbox-amd64%20(Snapshot%202)%20%5BRunning%5D%20-%20Oracle%20VirtualBox%2022_11_2026%2021_54_38.png?raw=true)
 
 
+👤 Author
 
+**Nnaemeka Janet**\
+Cybersecurity internship B084
+LinkedIn: [https://www.linkedin.com/in/janet-nnaemeka-164a521b3/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BHgwUBf4MRZOkY9lcbEwcKw%3D%3D
 
+https://www.linkedin.com/in/janet-nnaemeka-164a521b3?utm_source=share_via&utm_content=profile&utm_medium=member_ios
+
+Organisation: NetworkWalks
+
+Project Instructor : Sir Waqas Karim (CCIE) 
