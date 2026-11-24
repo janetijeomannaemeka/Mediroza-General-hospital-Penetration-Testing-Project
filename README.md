@@ -151,6 +151,8 @@ Three password-protected PDF lab reports were retrieved from the Patient Portal 
 
 ![](https://github.com/janetijeomannaemeka/Mediroza-General-hospital-Penetration-Testing-Project/blob/main/patient_report_1.pdf%20-%20WPS%20Office%2023_11_2026%2013_13_21.png?raw=true)
 
+![](https://github.com/janetijeomannaemeka/Mediroza-General-hospital-Penetration-Testing-Project/blob/main/Firefox%2023_11_2026%2013_36_53.png?raw=true)
+
 
 Two of three passwords (123456, password) are present in virtually every breached-password wordlist and were guessed within the first two attempts. The PDF encryption algorithm itself (AES/RC4, PDF revision 3, 128-bit) was not broken — the weakness is entirely in password selection, meaning the protection scheme gives a false sense of security while offering negligible real-world resistance.
 Finding 4 | Authentication Layer Weakness | High — requires confirmation|
