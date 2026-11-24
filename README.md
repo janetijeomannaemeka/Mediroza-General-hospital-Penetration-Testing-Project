@@ -33,7 +33,7 @@ Overall reported risk : CRITICAL
 A black-box assessment of medirozahospital.com identified a Critical chain of vulnerabilities that together expose patient lab results, full employee payroll records, and hospital shareholder/ownership data to any unauthenticated internet user. No specialized exploitation framework was required — the exposure was reachable through a publicly listed backup directory, and the patient poral's document protection relied on weak, easily guessed passwords.
 
 
-| # | Finding | Reported severity | Evidence status |
+2. | # | Finding | Reported severity | Evidence status |
 |---|---|---|---|
 | 1 |  	robots.txt entry advertised a legacy directory, leading to an unauthenticated, world-readable database backup (medirozahospital_db_backup_2019.sql) containing full employee and shareholder tables | Critical |   Reported as retrieved without authentication   |
 | 2 |  All 3 patient pathology reports retrieved from the Patient Portal were protected with weak passwords (123456, password, a short symbol string), cracked in seconds to minutes | Critical |Sensitive tables reportedly present in the SQL dump|
@@ -44,7 +44,7 @@ A black-box assessment of medirozahospital.com identified a Critical chain of vu
 Overall risk to the client: Critical. The combination of an exposed database backup and weak document/account credentials means a motivated attacker with no special tooling could access protected health information (PHI), personally identifiable information (PII) of all staff, and confidential ownership/financial data within minutes of starting reconnaissance.
 
 
-| Item | Details |
+3.  | Item | Details |
 |---|---|
 | Target | `https://medirozahospital.com` |
 | Application areas | Production web application, Patient Portal, and Staff Portal (as described in the engagement notes) |
@@ -55,13 +55,12 @@ Overall risk to the client: Critical. The combination of an exposed database bac
 | Scope restriction | Target domain only |
 | Exclusions | No social engineering, denial-of-service testing, or testing outside the agreed scope |
 
-
-3. 
+ 
 Limitations
 This was a scope-limited black-box assessment. No source-code review, internal network testing, physical testing, or social-engineering activity was performed. Findings reflect what the tester reports having observed from the public internet during the five-day window.
 
 
-Methodology and Tools
+4. Methodology and Tools
 The engagement followed a standard black-box workflow.
 
 | Phase | Activities | Tools / approach recorded |
