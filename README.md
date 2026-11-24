@@ -128,12 +128,15 @@ Notable cross-reference: Dr. Vikram Chetty and Dr. Ahmed Kara appear in both tab
 
 
 
-Finding 3 — Weak Password Protection on Confidential Patient Records |High|
+Finding 3 
+Weak Password Protection on Confidential Patient Records |High|
 Three password-protected PDF lab reports were retrieved from the Patient Portal |patients S. Dlamini| P. Reddy | E. Thompson|. All three were cracked using straightforward dictionary attacks against the extracted PDF password hash:
-File	Patient	Password Recovered	Attempts to Crack
-patient_report_1.pdf |	Sipho Dlamini |	!@#$%^&	3,582 / 3,592 (custom wordlist)
-patient_report_2.pdf |	Priya Reddy	 |password	2 / 100 (built-in list)
-patient_report_3.pdf |	Emily Thompson |	123456	1 / 100 (built-in list)
+|File	|Patient	Password |Recovered	Attempts to Crack|
+|---|---|---|
+|patient_report_1.pdf |	Sipho Dlamini |	!@#$%^&	3,582 / 3,592 (custom wordlist)|
+|patient_report_2.pdf |	Priya Reddy	 |password	2 / 100 (built-in list)|
+|patient_report_3.pdf |	Emily Thompson |	123456	1 / 100 (built-in list)|
+
 Two of three passwords (123456, password) are present in virtually every breached-password wordlist and were guessed within the first two attempts. The PDF encryption algorithm itself (AES/RC4, PDF revision 3, 128-bit) was not broken — the weakness is entirely in password selection, meaning the protection scheme gives a false sense of security while offering negligible real-world resistance.
 Finding 4 | Authentication Layer Weakness | High — requires confirmation|
 Testing of the Patient Portal login form with the input admin'-- in the username field (a standard SQL injection authentication-bypass probe) indicated the form does not appear to sanitize or parameterize user input before passing it to a backend query. This is consistent with the ease of access observed elsewhere in this engagement and should be confirmed with full request/response evidence (HTTP traffic capture) in the final technical annex.
