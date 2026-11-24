@@ -72,8 +72,9 @@ The engagement followed a standard black-box workflow.
 | Data analysis | Review of SQL schema, table contents, and file metadata | Manual review |
 
 
-[](https://github.com/janetijeomannaemeka/Mediroza-General-hospital-Penetration-Testing-Project/blob/main/Firefox%2023_11_2026%2012_53_43.png?raw=true)
+![](https://github.com/janetijeomannaemeka/Mediroza-General-hospital-Penetration-Testing-Project/blob/main/Firefox%2023_11_2026%2012_53_43.png?raw=true)
 
+![](https://github.com/janetijeomannaemeka/Mediroza-General-hospital-Penetration-Testing-Project/blob/main/kali-linux-2025.4-virtualbox-amd64%20(Snapshot%202)%20%5BRunning%5D%20-%20Oracle%20VirtualBox%2023_11_2026%2012_45_58.png?raw=true)
 
 
 5. Findings and Proof of Exploitation
