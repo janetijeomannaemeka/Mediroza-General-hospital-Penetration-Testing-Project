@@ -140,21 +140,25 @@ Testing of the Patient Portal login form with the input admin'-- in the username
 Finding 5 | Absence of Perimeter and Host-Based Defenses | High |
 No web application firewall, rate-limiting, or intrusion-prevention behavior was observed at any stage of testing: directory enumeration, repeated failed dictionary-attack attempts against PDF passwords, and credential-bypass probes against the login form all completed without delay, CAPTCHA challenges, IP blocking, or any visible defensive response. This indicates the absence of, or a significant misconfiguration in, firewall and intrusion-detection controls protecting the web tier, consistent with no antivirus/endpoint protection being evident on the hosting environment during testing.
 7. Risk Rating
-#	Finding	Risk Rating	Justification
-1	Public backup exposure via robots.txt + directory listing	Critical	Unauthenticated, trivial access to a full database dump; no auth or special tooling required
-2	Employee salary and shareholder data exposed	Critical	Confidential financial/PII data fully exposed; includes governance-sensitive conflict-of-interest detail
-3	Weak PDF passwords on patient reports	High	Encryption itself intact, but trivial passwords defeat it in seconds; PHI directly exposed
-4	Possible SQL injection on Patient Portal login	High 	Allows full authentication bypass without credentials
+#	|Finding |	Risk Rating |	Justification
+|---|---|---|
+1	|Public backup exposure via robots.txt + directory listing |	Critical |	Unauthenticated, trivial access to a full database dump; no auth or special tooling required |
+2	|Employee salary and shareholder data exposed	| Critical |	Confidential financial/PII data fully exposed; includes governance-sensitive conflict-of-interest detail|
+3	|Weak PDF passwords on patient reports	|High	| Encryption itself intact, but trivial passwords defeat it in seconds; PHI directly exposed|
+4	|Possible SQL injection on Patient Portal login |	High |	Allows full authentication bypass without credentials|
 
 Ratings follow a standard qualitative scale | Critical / High / Medium / Low | based on ease of exploitation, data sensitivity, and absence of compensating controls, consistent with CVSS-style severity reasoning.
+5 |Defensive controls not observed | High |Lack of visible defensive response may increase exposure; actual control status requires validation| 
+
 8. Recommendations and Remediation
-Finding	Recommended Action
-Backup exposure	Remove /old/ from the production webroot immediately; store backups outside any web-accessible directory; disable directory listing (Options -Indexes or server-equivalent) site-wide; never rely on robots.txt to hide sensitive paths — it is advisory-only and publicly readable
-Employee/shareholder data exposure	Treat this as a data breach requiring internal review and, depending on jurisdiction, regulatory notification; rotate any credentials found in the dump; restrict database backup access to authenticated internal systems only
-Weak PDF passwords	Enforce a minimum password policy (length + complexity) for any patient-facing document protection workflow; reject passwords found in breached-password lists (e.g. via a Pwned Passwords–style check); consider replacing ad hoc PDF passwords with per-patient, system-generated one-time access links
-Possible SQL injection	Audit and remediate the Patient Portal login query to use parameterized queries/prepared statements; add input validation and output encoding; re-test specifically for this after the fix
-Missing WAF/IDS/rate-limiting	Deploy a web application firewall and enable rate-limiting/account lockout on authentication endpoints; deploy endpoint protection (antivirus/EDR) on hosting infrastructure; enable logging and alerting for directory enumeration and repeated failed login attempts
-Priority order: Remediate Finding 1 (backup exposure) and Finding 4 (SQLi, once confirmed) immediately — both allow unauthenticated access to everything else in scope. Findings 2, 3 and 5 should follow within the same remediation cycle, as they compound the impact of the first two.
+| Priority | Area | Recommended action |
+|---|---|---|
+| P0 — Immediate | Backup exposure | Remove the exposed backup from the production web root, disable directory listing, and move backups to secure non-public storage. |
+| P0 — Immediate | Incident response | Preserve evidence, review logs, identify affected data, rotate exposed secrets, and assess breach-notification duties. |
+| P1 — High | Patient documents | Replace weak PDF password workflows with authenticated, time-limited access and review document permissions. |
+| P1 — High | Patient Portal login | Review query handling and remediate any unsafe database interaction with parameterized queries. Retest before confirming closure. |
+| P2 — Planned | Defensive monitoring | Validate WAF, rate-limiting, IDS/IPS, endpoint protection, centralized logging, and alerting. |
+| P2 — Planned | Assurance | Conduct a focused retest and record evidence that each finding has been remediated. |
 9. Conclusion
 This engagement demonstrates that a single overlooked configuration detail — a legacy directory referenced in robots.txt — was sufficient to cascade into full disclosure of patient health data, employee payroll, and hospital ownership records. None of the techniques used required advanced tooling; reconnaissance, dictionary attacks, and manual input testing were sufficient throughout, which itself underscores how exposed the environment currently is. Addressing Finding 1 and Finding 4 first will close the two routes that make every other finding in this report reachable from the open internet.
 
